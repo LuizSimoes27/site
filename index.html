@@ -307,6 +307,7 @@
                                       </table>
                                       <pre>
                                       <code text-align: center>
+<<<<<<< HEAD
                                         public static void BubbleSort(int qtd){
                                           int aux=0;
                                           int[] D = new int[qtd];
@@ -346,6 +347,135 @@
                                           System.out.println("Pior caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!");
                                       }
                                     </code>
+=======
+                                        public class Bubble {                                        
+                                            public static void bubble(int vet[]) {
+                                                for (int i = 0; i < vet.length; i++) {
+                                                    boolean estaOrdenado = true;
+                                                    for (int j = 0; j < vet.length - 1; j++) {
+                                                        if (vet[j] > vet[j + 1]) {
+                                                            int aux = vet[j];
+                                                            vet[j] = vet[j + 1];
+                                                            vet[j + 1] = aux;
+                                                            estaOrdenado = false;
+                                                        }
+                                                    }
+                                                    if (estaOrdenado) {
+                                                        break;
+                                                    }
+                                                }
+                                            }
+                                        
+                                            public static void bubble() {
+                                                System.out.println("--- Bubble Sort ---");
+                                        
+                                                System.out.println("== Vetor com [ 1.000 ] ==");
+                                                int quantidade = 1000;
+                                        
+                                                int a[] = new int[quantidade];
+                                                a = Ger.melhorCaso(quantidade);
+                                                long tempoInicial = System.currentTimeMillis();
+                                                bubble(a);
+                                                long tempoFinal = System.currentTimeMillis();
+                                                System.out.println("MELHOR CASO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
+                                        
+                                                //CASO MÉDIO
+                                                int b[] = new int[quantidade];
+                                                b = Ger.casoMedio(quantidade);
+                                                tempoInicial = System.currentTimeMillis();
+                                                bubble(b);
+                                                tempoFinal = System.currentTimeMillis();
+                                                System.out.println("CASO MÉDIO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
+                                        
+                                                //PIOR CASO
+                                                int c[] = new int[quantidade];
+                                                c = Ger.piorCaso(quantidade);
+                                                tempoInicial = System.currentTimeMillis();
+                                                bubble(c);
+                                                tempoFinal = System.currentTimeMillis();
+                                                System.out.println("PIOR CASO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
+                                        
+                                                System.out.println("== Vetor com [ 10.000 ] ==");
+                                                quantidade = 10000;
+                                        
+                                                int d[] = new int[quantidade];
+                                                d = Ger.melhorCaso(quantidade);
+                                                tempoInicial = System.currentTimeMillis();
+                                                bubble(d);
+                                                tempoFinal = System.currentTimeMillis();
+                                                System.out.println("MELHOR CASO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
+                                        
+                                                //CASO MÉDIO
+                                                int e[] = new int[quantidade];
+                                                e = Ger.casoMedio(quantidade);
+                                                tempoInicial = System.currentTimeMillis();
+                                                bubble(e);
+                                                tempoFinal = System.currentTimeMillis();
+                                                System.out.println("CASO MÉDIO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
+                                        
+                                                //PIOR CASO
+                                                int f[] = new int[quantidade];
+                                                f = Ger.piorCaso(quantidade);
+                                                tempoInicial = System.currentTimeMillis();
+                                                bubble(f);
+                                                tempoFinal = System.currentTimeMillis();
+                                                System.out.println("PIOR CASO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
+                                        
+                                                System.out.println("== Vetor com [ 500.000 ] ==");
+                                                quantidade = 500000;
+                                        
+                                                int g[] = new int[quantidade];
+                                                g = Ger.melhorCaso(quantidade);
+                                                tempoInicial = System.currentTimeMillis();
+                                                bubble(g);
+                                                tempoFinal = System.currentTimeMillis();
+                                                System.out.println("MELHOR CASO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
+                                        
+                                                //CASO MÉDIO
+                                                int h[] = new int[quantidade];
+                                                h = Ger.casoMedio(quantidade);
+                                                tempoInicial = System.currentTimeMillis();
+                                                bubble(h);
+                                                tempoFinal = System.currentTimeMillis();
+                                                System.out.println("CASO MÉDIO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
+                                        
+                                                //PIOR CASO
+                                                int i[] = new int[quantidade];
+                                                i = Ger.piorCaso(quantidade);
+                                                tempoInicial = System.currentTimeMillis();
+                                                bubble(i);
+                                                tempoFinal = System.currentTimeMillis();
+                                                System.out.println("PIOR CASO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
+                                        
+                                                System.out.println("== Vetor com [ 1.000.000 ] ==");
+                                                quantidade = 1000000;
+                                        
+                                                int j[] = new int[quantidade];
+                                                j = Ger.melhorCaso(quantidade);
+                                                tempoInicial = System.currentTimeMillis();
+                                                bubble(j);
+                                                tempoFinal = System.currentTimeMillis();
+                                                System.out.println("MELHOR CASO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
+                                        
+                                                //CASO MÉDIO
+                                                int k[] = new int[quantidade];
+                                                k = Ger.casoMedio(quantidade);
+                                                tempoInicial = System.currentTimeMillis();
+                                                bubble(k);
+                                                tempoFinal = System.currentTimeMillis();
+                                                System.out.println("CASO MÉDIO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
+                                        
+                                                //PIOR CASO
+                                                int l[] = new int[quantidade];
+                                                l = Ger.piorCaso(quantidade);
+                                                tempoInicial = System.currentTimeMillis();
+                                                bubble(l);
+                                                tempoFinal = System.currentTimeMillis();
+                                                System.out.println("PIOR CASO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
+                                            }
+                                        
+                                        }
+>>>>>>> 42da6637106788c34bb739c2e4eb939ed4c375c4
                                     </pre>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
