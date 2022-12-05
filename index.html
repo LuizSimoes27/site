@@ -179,6 +179,33 @@
                         <img class="img-fluid" src="assets/img/portfolio/piorcaso.png" alt="..." />
                     </div>
                 </div>
+                <!-- Portfolio Item 14-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                  <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal14">
+                      <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                          <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                      </div>
+                      <img class="img-fluid" src="assets/img/portfolio/melhorcasosem.png" alt="..." />
+                  </div>
+              </div>
+              <!-- Portfolio Item 15-->
+              <div class="col-md-6 col-lg-4 mb-5">
+                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal15">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                    </div>
+                    <img class="img-fluid" src="assets/img/portfolio/casomediosem.png" alt="..." />
+                </div>
+            </div>
+            <!-- Portfolio Item 16-->
+            <div class="col-md-6 col-lg-4 mb-5">
+              <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal16">
+                  <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                      <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                  </div>
+                  <img class="img-fluid" src="assets/img/portfolio/piorcasosem.png" alt="..." />
+              </div>
+          </div>
             </div>
                 </div>
             </div>
@@ -279,134 +306,46 @@
                                         </tbody>
                                       </table>
                                       <pre>
-                                      <code>
-                                        public class Bubble {                                        
-                                            public static void bubble(int vet[]) {
-                                                for (int i = 0; i < vet.length; i++) {
-                                                    boolean estaOrdenado = true;
-                                                    for (int j = 0; j < vet.length - 1; j++) {
-                                                        if (vet[j] > vet[j + 1]) {
-                                                            int aux = vet[j];
-                                                            vet[j] = vet[j + 1];
-                                                            vet[j + 1] = aux;
-                                                            estaOrdenado = false;
-                                                        }
-                                                    }
-                                                    if (estaOrdenado) {
-                                                        break;
-                                                    }
-                                                }
-                                            }
-                                        
-                                            public static void bubble() {
-                                                System.out.println("--- Bubble Sort ---");
-                                        
-                                                System.out.println("== Vetor com [ 1.000 ] ==");
-                                                int quantidade = 1000;
-                                        
-                                                int a[] = new int[quantidade];
-                                                a = Ger.melhorCaso(quantidade);
-                                                long tempoInicial = System.currentTimeMillis();
-                                                bubble(a);
-                                                long tempoFinal = System.currentTimeMillis();
-                                                System.out.println("MELHOR CASO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
-                                        
-                                                //CASO MÉDIO
-                                                int b[] = new int[quantidade];
-                                                b = Ger.casoMedio(quantidade);
-                                                tempoInicial = System.currentTimeMillis();
-                                                bubble(b);
-                                                tempoFinal = System.currentTimeMillis();
-                                                System.out.println("CASO MÉDIO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
-                                        
-                                                //PIOR CASO
-                                                int c[] = new int[quantidade];
-                                                c = Ger.piorCaso(quantidade);
-                                                tempoInicial = System.currentTimeMillis();
-                                                bubble(c);
-                                                tempoFinal = System.currentTimeMillis();
-                                                System.out.println("PIOR CASO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
-                                        
-                                                System.out.println("== Vetor com [ 10.000 ] ==");
-                                                quantidade = 10000;
-                                        
-                                                int d[] = new int[quantidade];
-                                                d = Ger.melhorCaso(quantidade);
-                                                tempoInicial = System.currentTimeMillis();
-                                                bubble(d);
-                                                tempoFinal = System.currentTimeMillis();
-                                                System.out.println("MELHOR CASO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
-                                        
-                                                //CASO MÉDIO
-                                                int e[] = new int[quantidade];
-                                                e = Ger.casoMedio(quantidade);
-                                                tempoInicial = System.currentTimeMillis();
-                                                bubble(e);
-                                                tempoFinal = System.currentTimeMillis();
-                                                System.out.println("CASO MÉDIO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
-                                        
-                                                //PIOR CASO
-                                                int f[] = new int[quantidade];
-                                                f = Ger.piorCaso(quantidade);
-                                                tempoInicial = System.currentTimeMillis();
-                                                bubble(f);
-                                                tempoFinal = System.currentTimeMillis();
-                                                System.out.println("PIOR CASO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
-                                        
-                                                System.out.println("== Vetor com [ 500.000 ] ==");
-                                                quantidade = 500000;
-                                        
-                                                int g[] = new int[quantidade];
-                                                g = Ger.melhorCaso(quantidade);
-                                                tempoInicial = System.currentTimeMillis();
-                                                bubble(g);
-                                                tempoFinal = System.currentTimeMillis();
-                                                System.out.println("MELHOR CASO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
-                                        
-                                                //CASO MÉDIO
-                                                int h[] = new int[quantidade];
-                                                h = Ger.casoMedio(quantidade);
-                                                tempoInicial = System.currentTimeMillis();
-                                                bubble(h);
-                                                tempoFinal = System.currentTimeMillis();
-                                                System.out.println("CASO MÉDIO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
-                                        
-                                                //PIOR CASO
-                                                int i[] = new int[quantidade];
-                                                i = Ger.piorCaso(quantidade);
-                                                tempoInicial = System.currentTimeMillis();
-                                                bubble(i);
-                                                tempoFinal = System.currentTimeMillis();
-                                                System.out.println("PIOR CASO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
-                                        
-                                                System.out.println("== Vetor com [ 1.000.000 ] ==");
-                                                quantidade = 1000000;
-                                        
-                                                int j[] = new int[quantidade];
-                                                j = Ger.melhorCaso(quantidade);
-                                                tempoInicial = System.currentTimeMillis();
-                                                bubble(j);
-                                                tempoFinal = System.currentTimeMillis();
-                                                System.out.println("MELHOR CASO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
-                                        
-                                                //CASO MÉDIO
-                                                int k[] = new int[quantidade];
-                                                k = Ger.casoMedio(quantidade);
-                                                tempoInicial = System.currentTimeMillis();
-                                                bubble(k);
-                                                tempoFinal = System.currentTimeMillis();
-                                                System.out.println("CASO MÉDIO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
-                                        
-                                                //PIOR CASO
-                                                int l[] = new int[quantidade];
-                                                l = Ger.piorCaso(quantidade);
-                                                tempoInicial = System.currentTimeMillis();
-                                                bubble(l);
-                                                tempoFinal = System.currentTimeMillis();
-                                                System.out.println("PIOR CASO - Executado em = " + (tempoFinal - tempoInicial) + " ms");
-                                            }
-                                        
-                                        }
+                                      <code text-align: center>
+                                        public static void BubbleSort(int qtd){
+                                          int aux=0;
+                                          int[] D = new int[qtd];
+                                          long tempo= 0;
+                                          System.out.println("BubbleSort - "+qtd+ " Valores: ");
+                                          do{
+                                              switch(aux){
+                                                  case 0: 
+                                                      D=melhorCaso(qtd);
+                                                  break;
+                                                  case 1:
+                                                      System.out.println("Melhor caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!"); 
+                                                      D=casoMedio(qtd);
+                                                  break;
+                                                  case 2:
+                                                      System.out.println("Caso médio: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!");  
+                                                      D=piorCaso(qtd);
+                                                  break;
+                                              }
+                                              tempo = System.nanoTime();
+                                              int N = D.length;
+                                              boolean swapped;
+                                              do {
+                                                  swapped = false;
+                                                  for (int i = 1; i < N; i++) {
+                                                      if (D[i - 1] > D[i]) {
+                                                      final int temp = D[i - 1];
+                                                      D[i - 1] = D[i];
+                                                      D[i] = temp;
+                                                      swapped = true;
+                                                      }
+                                                  }
+                                                  N--;
+                                              } while (swapped);
+                                              aux++;
+                                          }while(aux<3);
+                                          System.out.println("Pior caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!");
+                                      }
+                                    </code>
                                     </pre>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
@@ -473,6 +412,78 @@
                                           </tr>
                                         </tbody>
                                       </table>
+                                      <pre>
+                                        <code text-align: center>
+                                          public static void SelectionSort(int qtd){
+                                            int aux=0;
+                                            int[] D = new int[qtd];
+                                            long tempo= 0;
+                                            System.out.println("SelectionSort - "+qtd+ " - valores: ");
+                                            do{
+                                                switch(aux){
+                                                    case 0: 
+                                                        D=melhorCaso(qtd);
+                                                    break;
+                                                    case 1:
+                                                        System.out.println("Melhor caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!"); 
+                                                        D=casoMedio(qtd);
+                                                    break;
+                                                    case 2:
+                                                        System.out.println("Caso médio: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!");  
+                                                        D=piorCaso(qtd);
+                                                    break;
+                                                }
+                                                tempo = System.nanoTime();
+                                                int menor;
+                                                int menorPos;
+                                                for (int i = 0; i < D.length - 1; i++) {
+                                                    menor = D[i];
+                                                    menorPos = i;
+                                                    for (int j = i + 1; j < D.length; j++) {
+                                                        if (D[j] < menor) {
+                                                            menor = D[j];
+                                                            menorPos = j;
+                                                        }
+                                                    }
+                                                    D[menorPos] = D[i];
+                                                    D[i] = menor;
+                                                }
+                                                aux++;
+                                            }while(aux<3);
+                                            System.out.println("Pior caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!"); 
+                                        }
+                                        public static int[] casoMedio(int qtd) {
+                                            int[] vetor = new int[qtd];
+                                    
+                                            for (int i = 0; i < vetor.length; i++) {
+                                                vetor[i] = (int) (Math.random() * qtd);
+                                            }
+                                    
+                                            return vetor;
+                                        }
+                                    
+                                        public static int[] melhorCaso(int qtd) {
+                                            int[] vetor = new int[qtd];
+                                    
+                                            for (int i = 0; i < qtd; i++) {
+                                                vetor[i] = i;
+                                            }
+                                    
+                                            return vetor;
+                                        }
+                                    
+                                        public static int[] piorCaso(int qtd) {
+                                            int[] vetor = new int[qtd];
+                                            int j = qtd-1;
+                                            for (int i = 0;i<qtd; i++) {
+                                                vetor[j] = i;
+                                                j--;
+                                            }
+                                    
+                                            return vetor;
+                                        }
+                                      </code>
+                                      </pre>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -538,6 +549,42 @@
                                           </tr>
                                         </tbody>
                                       </table>
+                                      <pre>
+                                        <code text-align: center>
+                                          public static void InsertionSort(int qtd) {
+                                            int aux=0;
+                                            int[] D = new int[qtd];
+                                            long tempo= 0;
+                                            System.out.println("InsertionSort - "+qtd+ " Valores: ");
+                                            do{
+                                                switch(aux){
+                                                    case 0: 
+                                                        D=melhorCaso(qtd);
+                                                    break;
+                                                    case 1:
+                                                        System.out.println("Melhor caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!"); 
+                                                        D=casoMedio(qtd);
+                                                    break;
+                                                    case 2:
+                                                        System.out.println("Caso médio: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!");  
+                                                        D=piorCaso(qtd);
+                                                    break;
+                                                }
+                                                tempo = System.nanoTime();
+                                                for (int i = 1; i < D.length; i++) {
+                                                    final int key = D[i];
+                                                    int j;
+                                                    for (j = i - 1; (j >= 0) && (D[j] > key); j--) {
+                                                      D[j + 1] = D[j];
+                                                    }
+                                                    D[j + 1] = key;
+                                                }
+                                                aux++;
+                                            }while(aux<3);
+                                            System.out.println("Pior caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!"); 
+                                        }
+                                      </code>
+                                      </pre>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -603,6 +650,81 @@
                                           </tr>
                                         </tbody>
                                       </table>
+                                      <pre>
+                                        <code text-align: center>
+                                          public static void MergeSort(int qtd) {
+                                            int aux=0;
+                                            int[] D = new int[qtd];
+                                            long tempo= 0;
+                                            System.out.println("MergeSort - "+qtd+ " Valores: ");
+                                            do{
+                                                switch(aux){
+                                                    case 0: 
+                                                        D=melhorCaso(qtd);
+                                                    break;
+                                                    case 1:
+                                                        System.out.println("Melhor caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!"); 
+                                                        D=casoMedio(qtd);
+                                                    break;
+                                                    case 2:
+                                                        System.out.println("Caso médio: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!");  
+                                                        D=piorCaso(qtd);
+                                                    break;
+                                                }
+                                                tempo = System.nanoTime();
+                                                int elementos = 1;
+                                                int inicio, meio, fim;
+                                                while(elementos < qtd) {
+                                                  inicio = 0;    
+                                                  while(inicio + elementos < qtd) {
+                                                    meio = inicio + elementos;
+                                                    fim = inicio + 2 * elementos;
+                                                    if(fim > qtd)
+                                                      fim = qtd;
+                                                    intercala(D, inicio, meio, fim);
+                                                    inicio = fim;
+                                                  }
+                                                  elementos = elementos * 2;
+                                                }
+                                                aux++;
+                                            }while(aux<3);
+                                            System.out.println("Pior caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!");
+                                              }
+                                          private static void intercala(int[] vetor, int inicio, int meio, int fim) {
+                                            
+                                            int novoVetor[] = new int[fim - inicio];
+                                           
+                                            int i = inicio;
+                                    
+                                            int m = meio;
+                                            int pos = 0;
+                                            while(i < meio && m < fim) {
+                                              if(vetor[i] <= vetor[m]) {
+                                                novoVetor[pos] = vetor[i];
+                                                pos = pos + 1;
+                                                i = i + 1;
+                                              } else {
+                                                novoVetor[pos] = vetor[m];
+                                                pos = pos + 1;
+                                                m = m + 1;
+                                              }
+                                            }
+                                            while(i < meio) {
+                                              novoVetor[pos] = vetor[i];
+                                              pos = pos + 1;
+                                              i = i + 1;
+                                            }
+                                            while(m < fim) {
+                                              novoVetor[pos] = vetor[m];
+                                              pos = pos + 1;
+                                              m = m + 1;
+                                            }
+                                            for(pos = 0, i = inicio; i < fim; i++, pos++) {
+                                              vetor[i] = novoVetor[pos];
+                                            }
+                                          }
+                                      </code>
+                                      </pre>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -668,6 +790,90 @@
                                           </tr>
                                         </tbody>
                                       </table>
+                                      <pre>
+                                        <code text-align: center>
+                                          public static void QuickSort(int qtd) {
+                                            int aux=0;
+                                            int[] D = new int[qtd];
+                                            long tempo= 0;
+                                            System.out.println("QuickSort - "+qtd+ " Valores: ");
+                                            do{
+                                                switch(aux){
+                                                    case 0: 
+                                                        D=melhorCaso(qtd);
+                                                    break;
+                                                    case 1:
+                                                        System.out.println("Melhor caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!"); 
+                                                        D=casoMedio(qtd);
+                                                    break;
+                                                    case 2:
+                                                        System.out.println("Caso médio: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!");  
+                                                        D=piorCaso(qtd);
+                                                    break;
+                                                }
+                                                tempo = System.nanoTime();
+                                                QuickSort(D, 0, D.length - 1);
+                                                aux++;
+                                            }while(aux<3);
+                                            System.out.println("Pior caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!");
+                                          }
+                                    
+                                              
+                                        public static int dividir(int[] D, int inicio, int fim) {
+                                            int meio = (inicio + fim) / 2;
+                                            int start = D[inicio];
+                                            int mid = D[meio];
+                                            int end = D[fim];
+                                            int aux;
+                                        
+                                            if(start<mid){
+                                                if(mid < end){
+                                                    aux = meio;
+                                                }else{
+                                                    if(start < end){
+                                                        aux = fim;
+                                                    }else{
+                                                        aux = inicio;
+                                                    }
+                                                }
+                                            }else{
+                                                if (end < mid) {
+                                                    aux = meio;
+                                                } else {
+                                                    if(end < start){
+                                                        aux = fim;
+                                                    }else{
+                                                        aux = inicio;
+                                                    }
+                                                }
+                                            }
+                                            trocar(D, aux, fim);
+                                            int qck = D[fim];
+                                            int i = inicio - 1;
+                                            for (int j = inicio; j <= fim - 1; j++) {
+                                                if (D[j] <= qck) {
+                                                    i++;
+                                                    trocar(D, i, j);
+                                                }
+                                            }
+                                            trocar(D, i + 1, fim);
+                                            return i + 1;
+                                          }
+                                        public static void trocar(int[] vetor, int i, int j) {
+                                            int temp = vetor[i];
+                                            vetor[i] = vetor[j];
+                                            vetor[j] = temp;
+                                          }
+                                    
+                                        public static void QuickSort(int[] vetor, int inicio, int fim) {
+                                                if(fim > inicio) {
+                                                  int qck = dividir(vetor, inicio, fim);
+                                                  QuickSort(vetor, inicio, qck - 1);
+                                                  QuickSort(vetor, qck + 1, fim);
+                                                }
+                                          }
+                                      </code>
+                                      </pre>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -733,6 +939,45 @@
                                           </tr>
                                         </tbody>
                                       </table>
+                                      <pre>
+                                        <code text-align: center>
+                                          public static void RadixSort(int qtd){
+                                            int aux=0;
+                                            int[] D = new int[qtd];
+                                            long tempo= 0;
+                                            System.out.println("RadixSort - "+qtd+ " Valores: ");
+                                            do{
+                                                switch(aux){
+                                                    case 0: 
+                                                        D=melhorCaso(qtd);
+                                                    break;
+                                                    case 1:
+                                                        System.out.println("Melhor caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!"); 
+                                                        D=casoMedio(qtd);
+                                                    break;
+                                                    case 2:
+                                                        System.out.println("Caso médio: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!");  
+                                                        D=piorCaso(qtd);
+                                                    break;
+                                                }
+                                                tempo = System.nanoTime();
+                                                int m = getMax(D, D.length);
+                                                for (int exp = 1; m / exp > 0; exp *= 10)
+                                                radix(D, D.length, exp);
+                                                aux++;
+                                            }while(aux<3);
+                                            System.out.println("Pior caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!");
+                                        }
+                                        public static int getMax(int arr[], int n)
+                                        {
+                                            int mx = arr[0];
+                                            for (int i = 1; i < n; i++)
+                                                if (arr[i] > mx)
+                                                    mx = arr[i];
+                                            return mx;
+                                        }
+                                        </code>
+                                      </pre>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -798,6 +1043,63 @@
                                           </tr>
                                         </tbody>
                                       </table>
+                                      <pre>
+                                        <code text-align: center>
+                                          public static void CycleSort (int qtd){
+                                            int aux=0;
+                                            int[] D = new int[qtd];
+                                            long tempo= 0;
+                                            System.out.println("CycleSort - "+qtd+ " Valores: ");
+                                            do{
+                                                switch(aux){
+                                                    case 0: 
+                                                        D=melhorCaso(qtd);
+                                                    break;
+                                                    case 1:
+                                                        System.out.println("Melhor caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!"); 
+                                                        D=casoMedio(qtd);
+                                                    break;
+                                                    case 2:
+                                                        System.out.println("Caso médio: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!");  
+                                                        D=piorCaso(qtd);
+                                                    break;
+                                                }
+                                                tempo = System.nanoTime();
+                                                for (int cycle_start=0; cycle_start<=D.length-2; cycle_start++){
+                                                    int item = D[cycle_start];
+                                                    int pos = cycle_start;
+                                                    for (int i = cycle_start+1; i<D.length; i++)
+                                                        if (D[i] < item)
+                                                            pos++;
+                                                    if (pos == cycle_start)
+                                                        continue;
+                                                    while (item == D[pos])
+                                                        pos += 1;
+                                                    if (pos != cycle_start){
+                                                        int temp = item;
+                                                        item = D[pos];
+                                                        D[pos] = temp;
+                                                    }
+                                                    while (pos != cycle_start){
+                                                        pos = cycle_start;
+                                                        for (int i = cycle_start+1; i<D.length; i++)
+                                                            if (D[i] < item)
+                                                                pos += 1;
+                                                        while (item == D[pos])
+                                                            pos += 1;
+                                                        if (item != D[pos]){
+                                                            int temp = item;
+                                                            item = D[pos];
+                                                            D[pos] = temp;
+                                                        }
+                                                    }
+                                                }
+                                                aux++;
+                                            }while(aux<3);
+                                            System.out.println("Pior caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!");
+                                        }
+                                        </code>
+                                      </pre>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -852,7 +1154,7 @@
                                             <td>0,00066</td>
                                             <td>0,00156</td>
                                             <td>0,103</td>
-                                            <td>0,02268</td>
+                                            <td>0,2268</td>
                                           </tr>
                                           <tr>
                                             <th scope="row">Pior Caso</th>
@@ -863,6 +1165,56 @@
                                           </tr>
                                         </tbody>
                                       </table>
+                                      <pre>
+                                        <code text-align: center>
+                                          public static void BucketSort(int qtd) { 
+                                            int aux=0;
+                                            int[] D = new int[qtd];
+                                            long tempo= 0;
+                                            System.out.println("BucketSort - "+qtd+ " Valores: ");
+                                            do{
+                                                switch(aux){
+                                                    case 0: 
+                                                        D=melhorCaso(qtd);
+                                                    break;
+                                                    case 1:
+                                                        System.out.println("Melhor caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!"); 
+                                                        D=casoMedio(qtd);
+                                                    break;
+                                                    case 2:
+                                                        System.out.println("Caso médio: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!");  
+                                                        D=piorCaso(qtd);
+                                                    break;
+                                                }
+                                                tempo = System.nanoTime();
+                                                int bktSize = D.length/5;
+                                                List<Integer>[] buckets = new List[bktSize];    
+                                                for(int i = 0; i < bktSize; i++)  {  
+                                                    buckets[i] = new LinkedList<>();  
+                                                }   
+                                                for(int num : D){  
+                                                    buckets[hash(num, bktSize)].add(num);  
+                                                }    
+                                                for(List<Integer> bucket : buckets) {
+                                                    Collections.sort(bucket);  
+                                                }  
+                                                int index = 0;   
+                                                for(List<Integer> bucket : buckets){  
+                                                    for(int num : bucket)  {  
+                                                        D[index++] = num;  
+                                                    }  
+                                                } 
+                                                aux++;
+                                            }while(aux<3);
+                                            System.out.println("Pior caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!");
+                                            }     
+                                        
+                                            public static int hash(int num, int bucketSize)  
+                                            {  
+                                            return num/bucketSize;  
+                                            }  
+                                        </code>
+                                      </pre>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -928,6 +1280,43 @@
                                           </tr>
                                         </tbody>
                                       </table>
+                                      <pre>
+                                        <code text-align: center>
+                                          public static void ShellSort(int qtd) {
+                                            int aux=0;
+                                            int[] D = new int[qtd];
+                                            long tempo= 0;
+                                            System.out.println("ShellSort - "+qtd+ " Valores: ");
+                                            do{
+                                                switch(aux){
+                                                    case 0: 
+                                                        D=melhorCaso(qtd);
+                                                    break;
+                                                    case 1:
+                                                        System.out.println("Melhor caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!"); 
+                                                        D=casoMedio(qtd);
+                                                    break;
+                                                    case 2:
+                                                        System.out.println("Caso médio: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!");  
+                                                        D=piorCaso(qtd);
+                                                    break;
+                                                }
+                                                tempo = System.nanoTime();
+                                                for (int gap = D.length/2; gap > 0; gap /= 2){
+                                                    for (int i = gap; i < D.length; i += 1){
+                                                        int temp = D[i];
+                                                        int j;           
+                                                        for (j = i; j >= gap && D[j - gap] > temp; j -= gap)
+                                                            D[j] = D[j - gap];
+                                                        D[j] = temp;
+                                                    }
+                                                }
+                                                aux++;
+                                            }while(aux<3);
+                                            System.out.println("Pior caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!");
+                                         }
+                                        </code>
+                                      </pre>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -949,7 +1338,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Comnb Sort</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Comb Sort</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -993,6 +1382,54 @@
                                           </tr>
                                         </tbody>
                                       </table>
+                                      <pre>
+                                        <code text-align: center>
+                                          public static void CombSort(int qtd){
+                                            int aux=0;
+                                            int[] D = new int[qtd];
+                                            long tempo= 0;
+                                            System.out.println("CombSort - "+qtd+ " Valores: ");
+                                            do{
+                                                switch(aux){
+                                                    case 0: 
+                                                        D=melhorCaso(qtd);
+                                                    break;
+                                                    case 1:
+                                                        System.out.println("Melhor caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!"); 
+                                                        D=casoMedio(qtd);
+                                                    break;
+                                                    case 2:
+                                                        System.out.println("Caso médio: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!");  
+                                                        D=piorCaso(qtd);
+                                                    break;
+                                                }
+                                                tempo = System.nanoTime();
+                                                int gap = D.length;
+                                                boolean swapped = true;
+                                                while (gap != 1 || swapped == true){
+                                                  gap = getNextGap(gap);
+                                                  swapped = false;
+                                                    for (int i=0; i<D.length-gap; i++){
+                                                        if (D[i] > D[i+gap]){
+                                                            int temp = D[i];
+                                                            D[i] = D[i+gap];
+                                                            D[i+gap] = temp;
+                                                            swapped = true;
+                                                        }
+                                                    }
+                                                }
+                                                aux++;
+                                            }while(aux<3);
+                                            System.out.println("Pior caso: "+(System.nanoTime()-tempo)+" nanossegundos ou "+((System.nanoTime()-tempo)*Math.pow(10,-9))+" segundos!");
+                                          }
+                                          public static int getNextGap(int gap){
+                                              gap = (gap*10)/13;
+                                              if (gap < 1)
+                                                  return 1;
+                                              return gap;
+                                          }
+                                        </code>
+                                      </pre>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -1203,7 +1640,7 @@
                                             <td>0,00066</td>
                                             <td>0,00156</td>
                                             <td>0,103</td>
-                                            <td>0,02268</td>
+                                            <td>0,2268</td>
                                           </tr>
                                           <tr>
                                             <th scope="row">ShellSort</th>
@@ -1345,7 +1782,266 @@
                     </div>
                 </div>
             </div>
-        </div>       
+        </div>
+        <!-- Portfolio Modal 14-->
+        <div class="portfolio-modal modal fade" id="portfolioModal14" tabindex="-1" aria-labelledby="portfolioModal14" aria-hidden="true">
+          <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                  <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                  <div class="modal-body text-center pb-5">
+                      <div class="container">
+                          <div class="row justify-content-center">
+                              <div class="col-lg-8">
+                                  <!-- Portfolio Modal - Title-->
+                                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Melhor Caso Sem Insertion/Bubble/Selection/Cycle</h2>
+                                  <!-- Icon Divider-->
+                                  <div class="divider-custom">
+                                      <div class="divider-custom-line"></div>
+                                      <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                      <div class="divider-custom-line"></div>
+                                  </div>
+                                  <!-- Portfolio Modal - Image-->
+                                  <img class="img-fluid rounded mb-5" src="assets/img/portfolio/melhorcasosem.png" alt="..." />
+                                  <!-- Portfolio Modal - Text-->
+                                  <table class="table table-bordered">
+                                      <thead>
+                                        <tr>
+                                          <th scope="col">#</th>
+                                          <th scope="col">1000</th>
+                                          <th scope="col">10000</th>
+                                          <th scope="col">500000</th>
+                                          <th scope="col">1000000</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <th scope="row">MergeSort</th>
+                                          <td>0,000305</td>
+                                          <td>0,000981</td>
+                                          <td>0,027988</td>
+                                          <td>0,052208</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">QuickSort</th>
+                                          <td>0,000281</td>
+                                          <td>0,000321</td>
+                                          <td>0,00507</td>
+                                          <td>0,01019</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">RadixSort</th>
+                                          <td>0,000197</td>
+                                          <td>0,001279</td>
+                                          <td>0,019395</td>
+                                          <td>0,02752</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">BucketSort</th>
+                                          <td>0,00155</td>
+                                          <td>0,00162</td>
+                                          <td>0,0248</td>
+                                          <td>0,0238</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">ShellSort</th>
+                                          <td>0,000187</td>
+                                          <td>0,00149</td>
+                                          <td>0,001768</td>
+                                          <td>0,014911</td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">CombSort</th>
+                                          <td>0,000227</td>
+                                          <td>0,00132</td>
+                                          <td>0,01299</td>
+                                          <td>0,02714</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                                      <i class="fas fa-xmark fa-fw"></i>
+                                      Close Window
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Portfolio Modal 15-->
+      <div class="portfolio-modal modal fade" id="portfolioModal15" tabindex="-1" aria-labelledby="portfolioModal15" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Caso Médio Sem Insertion/Bubble/Selection/Cycle</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/casomediosem.png" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <table class="table table-bordered">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">1000</th>
+                                        <th scope="col">10000</th>
+                                        <th scope="col">500000</th>
+                                        <th scope="col">1000000</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>                                      
+                                      <tr>
+                                        <th scope="row">MergeSort</th>
+                                        <td>0,000114</td>
+                                        <td>0,0012474</td>
+                                        <td>0,045521</td>
+                                        <td>0,112343</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">QuickSort</th>
+                                        <td>0,000085</td>
+                                        <td>0,000665</td>
+                                        <td>0,02841</td>
+                                        <td>0,05983</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">RadixSort</th>
+                                        <td>0,000175</td>
+                                        <td>0,000432</td>
+                                        <td>0,018527</td>
+                                        <td>0,03021</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">BucketSort</th>
+                                        <td>0,00066</td>
+                                        <td>0,00156</td>
+                                        <td>0,103</td>
+                                        <td>0,2268</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">ShellSort</th>
+                                        <td>0,000369</td>
+                                        <td>0,00103</td>
+                                        <td>0,050984</td>
+                                        <td>0,10627</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">CombSort</th>
+                                        <td>0,000406</td>
+                                        <td>0,00335</td>
+                                        <td>0,03587</td>
+                                        <td>0,07716</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 16-->
+    <div class="portfolio-modal modal fade" id="portfolioModal16" tabindex="-1" aria-labelledby="portfolioModal16" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+              <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+              <div class="modal-body text-center pb-5">
+                  <div class="container">
+                      <div class="row justify-content-center">
+                          <div class="col-lg-8">
+                              <!-- Portfolio Modal - Title-->
+                              <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Pior Caso Sem Insertion/Bubble/Selection/Cycle</h2>
+                              <!-- Icon Divider-->
+                              <div class="divider-custom">
+                                  <div class="divider-custom-line"></div>
+                                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                  <div class="divider-custom-line"></div>
+                              </div>
+                              <!-- Portfolio Modal - Image-->
+                              <img class="img-fluid rounded mb-5" src="assets/img/portfolio/piorcasosem.png" alt="..." />
+                              <!-- Portfolio Modal - Text-->
+                              <table class="table table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">#</th>
+                                      <th scope="col">1000</th>
+                                      <th scope="col">10000</th>
+                                      <th scope="col">500000</th>
+                                      <th scope="col">1000000</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>                                    
+                                    <tr>
+                                      <th scope="row">MergeSort</th>
+                                      <td>0,0000794</td>
+                                      <td>0,0009101</td>
+                                      <td>0,015662</td>
+                                      <td>0,041457</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">QuickSort</th>
+                                      <td>0,000048</td>
+                                      <td>0,000442</td>
+                                      <td>0,01058</td>
+                                      <td>0,02237</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">RadixSort</th>
+                                      <td>0,000179</td>
+                                      <td>0,000433</td>
+                                      <td>0,017369</td>
+                                      <td>0,02644</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">BucketSort</th>
+                                      <td>0,00026</td>
+                                      <td>0,00146</td>
+                                      <td>0,0393</td>
+                                      <td>0,02622</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">ShellSort</th>
+                                      <td>0,000266</td>
+                                      <td>0,000471</td>
+                                      <td>0,009485</td>
+                                      <td>0,0244</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">CombSort</th>
+                                      <td>0,000304</td>
+                                      <td>0,00356</td>
+                                      <td>0,01471</td>
+                                      <td>0,03132</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              <button class="btn btn-primary" data-bs-dismiss="modal">
+                                  <i class="fas fa-xmark fa-fw"></i>
+                                  Close Window
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>       
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
