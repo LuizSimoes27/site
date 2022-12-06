@@ -210,9 +210,6 @@
                 </div>
             </div>
         </section>
-        <!-- About Section-->
-       
-        <!-- Contact Section-->
         
         <!-- Footer-->
         <footer class="footer text-center">
@@ -268,6 +265,10 @@
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
+                                    <p>Bubble sort é o algoritmo mais simples, mas o menos eficientes. Neste algoritmo cada elemento da posição i será comparado com o elemento da posição i + 1, ou seja, um elemento da posição 2 será comparado com o elemento da posição 3. Caso o elemento da posição 2 for maior que o da posição 3, eles trocam de lugar e assim sucessivamente. Por causa dessa forma de execução, o vetor terá que ser percorrido quantas vezes que for necessária, tornando o algoritmo ineficiente para listas muito grandes.</p>
+                                    <p>Complexidade Pior Caso: O(n²)</p>
+                                    <p>Complexidade Caso Médio: O(n²)</p>
+                                    <p>Complexidade Melhor Caso: O(n)</p>
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/bubblesort.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
@@ -305,6 +306,9 @@
                                           </tr>
                                         </tbody>
                                       </table>
+                                      <p>Complexidade Pior Caso: O(n²)</p>
+                                      <p>Complexidade Caso Médio: O(n²)</p>
+                                      <p>Complexidade Melhor Caso: O(n)</p>
                                       <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">static</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">BubbleSort</span><span style="color: #333333">(</span><span style="color: #333399; font-weight: bold">int</span> qtd<span style="color: #333333">)</span> <span style="color: #333333">{</span>
                                               <span style="color: #333399; font-weight: bold">int</span> aux <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">;</span>
                                               <span style="color: #333399; font-weight: bold">int</span><span style="color: #333333">[]</span> D <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">new</span> <span style="color: #333399; font-weight: bold">int</span><span style="color: #333333">[</span>qtd<span style="color: #333333">];</span>
@@ -373,6 +377,7 @@
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
+                                    <p>A ordenação por seleção ou selection sort consiste em selecionar o menor item e colocar na primeira posição, selecionar o segundo menor item e colocar na segunda posição, segue estes passos até que reste um único elemento. Para todos os casos (melhor, médio e pior caso) possui complexidade C(n) = O(n²) e não é um algoritmo estável.</p>
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/selectionsort.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
@@ -478,6 +483,7 @@
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
+                                    <p>Insertion Sort ou ordenação por inserção é o método que percorre um vetor de elementos da esquerda para a direita e à medida que avança vai ordenando os elementos à esquerda. Possui complexidade C(n) = O(n) no melhor caso e C(n) = O(n²) no caso médio e pior caso. É considerado um método de ordenação estável.</p>
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/insertionsort.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
@@ -577,6 +583,10 @@
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
+                                    <p>Criado em 1945 pelo matemático americano John Von Neumann o Mergesort é um exemplo de algoritmo de ordenação que faz uso da estratégia “dividir para conquistar” para resolver problemas. É um método estável e possui complexidade C(n) = O(n log n) para todos os casos.</p>
+                                    <p>Esse algoritmo divide o problema em pedaços menores, resolve cada pedaço e depois junta (merge) os resultados. O vetor será dividido em duas partes iguais, que serão cada uma divididas em duas partes, e assim até ficar um ou dois elementos cuja ordenação é trivial.</p>                                     
+                                    <p>Para juntar as partes ordenadas os dois elementos de cada parte são separados e o menor deles é selecionado e retirado de sua parte. Em seguida os menores entre os restantes são comparados e assim se prossegue até juntar as partes.</p>
+                                    
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/mergesort.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
@@ -717,6 +727,18 @@
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
+                                    <p>O Algoritmo Quicksort, criado por C. A. R. Hoare em 1960, é o método de ordenação interna mais rápido que se conhece para uma ampla variedade de situações.</p>
+
+                                    <p>Provavelmente é o mais utilizado. Possui complexidade C(n) = O(n²) no pior caso e C(n) = O(n log n) no melhor e médio caso e não é um algoritmo estável.</p>
+                                      
+                                     <p>É um algoritmo de comparação que emprega a estratégia de “divisão e conquista”. A ideia básica é dividir o problema de ordenar um conjunto com n itens em dois problemas menores. Os problemas menores são ordenados independentemente e os resultados são combinados para produzir a solução final.
+                                      Basicamente a operação do algoritmo pode ser resumida na seguinte estratégia: divide sua lista de entrada em duas sub-listas a partir de um pivô, para em seguida realizar o mesmo procedimento nas duas listas menores até uma lista unitária.</p> 
+                                      <p>Funcionamento do algoritmo:</p>                                      
+                                      <ul>
+                                        <li>Escolhe um elemento da lista chamado pivô.</li>
+                                      <li>Reorganiza a lista de forma que os elementos menores que o pivô fiquem de um lado, e os maiores fiquem de outro. Esta operação é chamada de “particionamento”.</li>
+                                      <li>Recursivamente ordena a sub-lista abaixo e acima do pivô.</li>
+                                    </ul>
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/quicksort.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
@@ -864,6 +886,8 @@
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
+                                    <p> A ideia do Radix Sort é fazer a classificação dígito a dígito, começando do dígito menos significativo ao dígito mais significativo. A classificação Radix usa a classificação por contagem como uma sub-rotina para classificar.</p>
+                                    <p>Complexidade: O(n)</p>
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/radixsort.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
@@ -984,6 +1008,10 @@
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
+                                    <P>Cycle sort é um algoritmo de ordenação instável no local, uma ordenação por comparação teoricamente ideal em termos do número total de gravações no array original, diferente de qualquer outro algoritmo de ordenação no local.</P>
+                                    <p>Complexidade Pior Caso: O(n²)</p>
+                                    <p>Complexidade Caso Médio: O(n²)</p>
+                                    <p>Complexidade Melhor Caso: O(n²)</p>
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cyclesort.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
@@ -1111,6 +1139,10 @@
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
+                                    <p>Bucket sort, ou bin sort, é um algoritmo de ordenação que funciona dividindo um vetor em um número finito de recipientes. Cada recipiente é então ordenado individualmente, seja usando um algoritmo de ordenação diferente, ou usando o algoritmo bucket sort recursivamente. O Bucket Sort tem complexidade linear {\displaystyle \Theta (n)}{\displaystyle \Theta (n)} quando o vetor a ser ordenado contém valores que são uniformemente distribuídos.</p>
+                                    <p>Complexidade Pior Caso: O(n²)</p>
+                                    <p>Complexidade Caso Médio: O(n)</p>
+                                    <p>Complexidade Melhor Caso: O(n)</p>
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/bucketsort.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
@@ -1223,6 +1255,8 @@
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
+                                    <p>Criado por Donald Shell em 1959, o método Shell Sort é uma extensão do algoritmo de ordenação por inserção. Ele permite a troca de registros distantes um do outro, diferente do algoritmo de ordenação por inserção que possui a troca de itens adjacentes para determinar o ponto de inserção. A complexidade do algoritmo é desconhecida, ninguém ainda foi capaz de encontrar uma fórmula fechada para sua função de complexidade e o método não é estável.</p>
+                                    </p>Os itens separados de h posições (itens distantes) são ordenados: o elemento na posição x é comparado e trocado (caso satisfaça a condição de ordenação) com o elemento na posição x-h. Este processo repete até h=1, quando esta condição é satisfeita o algoritmo é equivalente ao método de inserção.</p>
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/shellsort.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
@@ -1324,6 +1358,10 @@
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
+                                    <p>O algoritmo Comb sort (ou Combo sort ou ainda algoritmo do pente[1]) é um algoritmo de ordenação relativamente simples, e faz parte da família de algoritmos de ordenação por troca. Foi desenvolvido em 1980 por Wlodzimierz Dobosiewicz. Mais tarde, foi redescoberto e popularizado por Stephen Lacey e Richard Box em um artigo publicado na revista Byte em Abril de 1991. O Comb sort melhora o Bubble sort, e rivaliza com algoritmos como o Quicksort. A ideia básica é eliminar as tartarugas ou pequenos valores próximos do final da lista, já que em um bubble sort estes retardam a classificação tremendamente.</p>
+                                    <p>Complexidade Pior Caso: O(n²)</p>
+                                    <p>Complexidade Caso Médio: O(n²/p²)</p>
+                                    <p>Complexidade Melhor Caso: O(n)</p>
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/combsort.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
